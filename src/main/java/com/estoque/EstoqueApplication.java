@@ -1,7 +1,7 @@
 package com.estoque;
 
 import org.springframework.boot.SpringApplication;
-import connections.*;
+import com.estoque.connections.*;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.rabbitmq.client.ConnectionFactory;

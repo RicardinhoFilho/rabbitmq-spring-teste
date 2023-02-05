@@ -1,7 +1,8 @@
-package connections;
+package com.estoque.connections;
+
 import org.springframework.stereotype.Component;
 
-import constantes.RabbitmqConstantes;
+import com.estoque.constantes.RabbitmqConstantes;
 import jakarta.annotation.PostConstruct;
 import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.core.DirectExchange;
@@ -38,8 +39,8 @@ public class RabbitMQConnection {
 	  //está função é executada assim que nossa classe é instanciada pelo Spring, devido a anotação @Component
 	  @PostConstruct
 	  private void adiciona(){
-	    Queue filaEstoque = this.fila(RabbitmqConstantes.FILA_ESTOQUE);
-	    Queue filaPreco   = this.fila(RabbitmqConstantes.FILA_PRECO);
+	    Queue filaEstoque = this.fila(com.estoque.constantes.RabbitmqConstantes.FILA_ESTOQUE);
+	    Queue filaPreco   = this.fila(com.estoque.constantes.RabbitmqConstantes.FILA_PRECO);
 
 	    DirectExchange troca = this.trocaDireta();
 
