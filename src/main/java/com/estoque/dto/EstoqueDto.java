@@ -1,7 +1,12 @@
 package  com.estoque.dto;
+
+
 import java.io.Serializable;
 
+
 public class EstoqueDto implements Serializable {
+	
+	
 	public String codigoproduto;
 	public String quantidade;
 }
